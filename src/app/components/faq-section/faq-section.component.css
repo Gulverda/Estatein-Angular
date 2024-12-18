@@ -1,68 +1,93 @@
 .faq {
-  text-align: center;
+  text-align: left;
   color: #fff;
-  background: #111;
-  padding: 2rem;
+  margin-top: clamp(60px, 10vw, 120px); /* Dynamic top margin */
+  padding: 0 clamp(1rem, 5vw, 5rem); /* Responsive side padding */
 }
 
 .faq-container {
   display: flex;
   justify-content: center;
-  gap: 1.5rem;
-  margin-top: 1rem;
+  gap: clamp(0.5rem, 2vw, 1.5rem); /* Dynamic gap */
+  margin-top: clamp(1rem, 4vw, 4rem); /* Dynamic margin-top */
   flex-wrap: wrap; /* Enables wrapping for smaller screens */
 }
 
+.faq_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: clamp(20px, 4vw, 30px); /* Responsive gap */
+}
+
+.faq_header h2 {
+  font-size: clamp(1.5rem, 2.5vw, 3rem); /* Responsive font size */
+  margin-bottom: clamp(0.8rem, 2vw, 1.2rem); /* Dynamic margin-bottom */
+}
+
 .faq-item {
-  background: #1e1e1e;
-  padding: 1.5rem;
-  border-radius: 8px;
-  width: 300px;
-  box-shadow: 0 0 10px #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: clamp(1rem, 3vw, 1.5rem); /* Dynamic gap between elements */
+  border: 1px solid #262626;
+  padding: clamp(1rem, 2vw, 2.5rem); /* Responsive padding */
+  border-radius: clamp(5px, 1vw, 8px); /* Responsive border radius */
+  width: clamp(250px, 30%, 300px); /* Responsive card width */
+  box-shadow: 0 0 clamp(5px, 1vw, 10px) #000; /* Responsive shadow size */
 }
 
 .btn {
-  margin-top: 1rem;
-  padding: 0.5rem 1.5rem;
-  background: #ffc107;
-  color: #111;
-  border: none;
-  border-radius: 5px;
+  background: none;
   cursor: pointer;
+  padding: clamp(10px, 2vw, 14px) clamp(15px, 4vw, 20px); /* Dynamic padding */
+  border: 1px solid #262626;
+  font-size: clamp(0.9rem, 2vw, 1rem); /* Responsive font size */
+  border-radius: clamp(5px, 1vw, 8px); /* Dynamic border radius */
+  color: #fff;
+  transition: transform 0.2s ease;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .faq_header {
+    flex-direction: column; /* Stack header elements vertically */
+    align-items: flex-start; /* Align items to the left */
+  }
+
   .faq-container {
-    gap: 1rem; /* Reduce gap for smaller screens */
+    gap: clamp(0.5rem, 3vw, 1rem); /* Reduce gap for smaller screens */
   }
 
   .faq-item {
-    width: 100%; /* Make items full-width for smaller screens */
-    max-width: 90%; /* Add some padding for margins */
+    width: 100%; /* Make items full-width */
+    max-width: clamp(90%, 95%, 100%); /* Add padding for margins */
   }
 
   .btn {
-    width: 100%; /* Make the button full-width */
-    padding: 0.75rem 1rem; /* Adjust padding for better touch interaction */
+    width: 100%; /* Full-width button */
   }
 }
 
 @media (max-width: 480px) {
   .faq {
-    padding: 1rem; /* Reduce padding for very small screens */
+    padding: 0 clamp(0.5rem, 3vw, 1rem); /* Reduce side padding for smaller screens */
+    margin-top: clamp(30px, 5vw, 60px); /* Adjust top margin */
   }
 
-  .faq-container {
-    gap: 0.5rem; /* Reduce gap further */
+  .faq_header h2 {
+    font-size: clamp(1.2rem, 4vw, 1.8rem); /* Smaller font size for very small screens */
+    margin-bottom: clamp(0.5rem, 2vw, 0.8rem); /* Adjust spacing */
   }
 
   .faq-item {
-    padding: 1rem; /* Reduce padding for smaller content */
-    border-radius: 5px; /* Slightly smaller border radius */
+    padding: clamp(0.8rem, 2vw, 1rem); /* Reduce padding */
+    border-radius: clamp(3px, 0.8vw, 5px); /* Smaller border radius */
+    gap: clamp(0.8rem, 2vw, 1rem); /* Adjust gap */
   }
 
   .btn {
-    font-size: 0.9rem; /* Adjust font size for smaller screens */
+    font-size: clamp(0.8rem, 1.5vw, 0.9rem); /* Adjust font size */
+    padding: clamp(0.4rem, 2vw, 0.8rem) clamp(0.6rem, 3vw, 1rem); /* Adjust padding */
   }
 }

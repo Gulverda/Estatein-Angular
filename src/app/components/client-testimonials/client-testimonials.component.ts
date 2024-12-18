@@ -20,7 +20,7 @@ export class ClientTestimonialsComponent {
       avatar: 'assets/User1.png',
     },
     {
-      stars: [1, 2, 3, 4, 5],
+      stars: [1, 2, 3, 4],
       title: 'Efficient and Reliable',
       comment:
         'Estatein provided us with top-notch service. They helped us sell quickly at a great price.',

@@ -1,9 +1,14 @@
 <section class="faq">
-    <h2>Frequently Asked Questions</h2>
-    <p>
-      Find answers to common questions about Estatein's services, property
-      listings, and the real estate process.
-    </p>
+    <div class="faq_header">
+      <div class="faq_titles">
+        <h2>Frequently Asked Questions</h2>
+      <p>
+        Find answers to common questions about Estatein's services, property
+        listings, and the real estate process.
+      </p>
+      </div>
+      <button class="btn">View All FAQ's</button>
+    </div>
     <div class="faq-container">
       <div class="faq-item" *ngFor="let faq of faqs">
         <h3>{{ faq.question }}</h3>
@@ -11,6 +16,5 @@
         <button class="btn">Read More</button>
       </div>
     </div>
-    <button class="btn">View All FAQ's</button>
   </section>
   
