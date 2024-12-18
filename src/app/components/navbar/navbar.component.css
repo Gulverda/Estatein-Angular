@@ -1,0 +1,106 @@
+/* General Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+    background-color: #1e1e1e;
+    color: white;
+    /* width: 100%; */
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #673ab7;
+  }
+  
+  ul {
+    display: flex;
+    list-style: none;
+    gap: 16px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    cursor: pointer;
+  }
+  
+  ul li a:hover {
+    color: #673ab7;
+  }
+  
+  /* Burger Menu Button */
+  .burger {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .burger span {
+    width: 24px;
+    height: 3px;
+    background: white;
+    border-radius: 4px;
+    transition: transform 0.3s ease;
+  }
+
+  .contact_button {
+    background-color: #141414;
+    border: 1px solid #262626;
+    color: #fff;
+    padding: 16px 24px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  /* Responsive Navbar */
+  @media (max-width: 768px) {
+
+    .burger {
+      display: flex;
+    }
+
+    .contact_button{
+        display: none;
+    }
+  
+    ul {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      z-index: 1;
+      top: 64px;
+      right: 16px;
+      background: #1e1e1e;
+      width: 200px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      padding: 16px;
+    }
+  
+    ul.active {
+      display: flex;
+    }
+  
+    ul li {
+      margin-bottom: 12px;
+    }
+  
+    ul li:last-child {
+      margin-bottom: 0;
+    }
+
+    ul li .contact_button{
+        display: block !important;
+    }
+  }
+  

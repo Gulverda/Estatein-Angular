@@ -1,0 +1,32 @@
+.faq {
+    text-align: center;
+    color: #fff;
+    background: #111;
+    padding: 2rem;
+  }
+  
+  .faq-container {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+  
+  .faq-item {
+    background: #1e1e1e;
+    padding: 1.5rem;
+    border-radius: 8px;
+    width: 300px;
+    box-shadow: 0 0 10px #000;
+  }
+  
+  .btn {
+    margin-top: 1rem;
+    padding: 0.5rem 1.5rem;
+    background: #ffc107;
+    color: #111;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  

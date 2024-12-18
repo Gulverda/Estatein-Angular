@@ -1,0 +1,25 @@
+<nav class="navbar">
+    <div class="logo">
+        <img src="assets/Logo.png" alt="Skyscraper">
+    </div>
+    <ul [class.active]="isMenuOpen">
+      <li><a routerLink="/" (click)="toggleMenu()">Home</a></li>
+      <li><a routerLink="/about-us" (click)="toggleMenu()">About Us</a></li>
+      <li><a routerLink="/properties" (click)="toggleMenu()">Properties</a></li>
+      <li><a routerLink="/services" (click)="toggleMenu()">Services</a></li>
+      <li>
+        <button class="contact_button" style="display: none;">
+            <a routerLink="/contact-us" (click)="toggleMenu()">contact-us</a>
+        </button>
+      </li>
+    </ul>
+    <button class="contact_button">
+        <a routerLink="/contact-us" (click)="toggleMenu()">contact-us</a>
+    </button>
+    <button class="burger" (click)="toggleMenu()" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+  </nav>
+  

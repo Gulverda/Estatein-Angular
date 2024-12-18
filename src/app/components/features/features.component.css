@@ -1,0 +1,17 @@
+.features {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+  
+    mat-card {
+      width: 22%;
+      background-color: #242424;
+      color: #fff;
+  
+      mat-card-header {
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+  

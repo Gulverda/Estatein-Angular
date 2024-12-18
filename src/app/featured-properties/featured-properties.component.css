@@ -1,0 +1,137 @@
+/* General Container */
+.featured-properties {
+    background-color: #0e0e10;
+    color: #fff;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .featured-properties h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .featured-properties p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    color: #bbb;
+  }
+  
+  /* Grid Layout */
+  .properties-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .property-card {
+    background: #1b1b20;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+  }
+  
+  .property-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .property-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .property-content {
+    padding: 1.5rem;
+  }
+  
+  .property-content h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .property-content p {
+    font-size: 0.9rem;
+    color: #aaa;
+  }
+  
+  .property-details {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0;
+    font-size: 0.9rem;
+    color: #ddd;
+  }
+  
+  .property-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .property-footer .price {
+    font-size: 1rem;
+    color: #fff;
+  }
+  
+  .details-btn {
+    background: #7b61ff;
+    border: none;
+    padding: 0.5rem 1rem;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background 0.3s ease;
+  }
+  
+  .details-btn:hover {
+    background: #6246e5;
+  }
+  
+  /* Pagination */
+  .pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+    color: #ddd;
+  }
+  
+  .pagination-controls .nav-btn {
+    background: transparent;
+    border: 1px solid #7b61ff;
+    color: #7b61ff;
+    padding: 0.5rem 0.8rem;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  
+  .pagination-controls .nav-btn:hover {
+    background: #7b61ff;
+    color: #fff;
+  }
+
+  @media (max-width: 768px) {
+    .properties-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .featured-properties h2 {
+      font-size: 1.5rem;
+    }
+  
+    .property-content {
+      padding: 1rem;
+    }
+  
+    .details-btn {
+      padding: 0.4rem 0.8rem;
+    }
+  }
+  

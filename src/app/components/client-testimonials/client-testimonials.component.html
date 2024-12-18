@@ -1,0 +1,22 @@
+<section class="testimonials">
+    <h2>What Our Clients Say</h2>
+    <p>
+      Read the success stories and heartfelt testimonials from our valued clients.
+      Discover why they chose Estatein for their real estate needs.
+    </p>
+    <div class="testimonial-container">
+      <div class="testimonial" *ngFor="let review of reviews">
+        <div class="stars">
+          <span *ngFor="let star of review.stars">&#9733;</span>
+        </div>
+        <h3>{{ review.title }}</h3>
+        <p>{{ review.comment }}</p>
+        <div class="user-info">
+          <img [src]="review.avatar" alt="User Avatar" />
+          <p>{{ review.name }} <br /> {{ review.location }}</p>
+        </div>
+      </div>
+    </div>
+    <button class="btn">View All Testimonials</button>
+  </section>
+  

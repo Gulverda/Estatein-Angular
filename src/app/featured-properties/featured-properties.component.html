@@ -1,0 +1,40 @@
+<div class="featured-properties">
+    <h2>Featured Properties</h2>
+    <p>
+      Explore our handpicked selection of featured properties. Each listing offers
+      a glimpse into exceptional homes and investments available through Estatein.
+    </p>
+    <div class="properties-grid">
+      <!-- Single Card -->
+      <div class="property-card" *ngFor="let property of properties">
+        <div class="property-image">
+          <img [src]="property.imgUrl" [alt]="property.title" />
+        </div>
+        <div class="property-content">
+          <h3>{{ property.title }}</h3>
+          <p>
+            {{ property.description }}
+            <a href="#">Read More</a>
+          </p>
+          <div class="property-details">
+            <span>{{ property.bedroom }}-Bedroom</span>
+            <span>{{ property.bathroom }}-Bathroom</span>
+            <span>Villa</span>
+          </div>
+          <div class="property-footer">
+            <p class="price">Price <strong>{{ property.price }}</strong></p>
+            <button class="details-btn">View Property Details</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Pagination -->
+    <div class="pagination">
+      <span>01 of 60</span>
+      <div class="pagination-controls">
+        <button class="nav-btn">&#8592;</button>
+        <button class="nav-btn">&#8594;</button>
+      </div>
+    </div>
+  </div>
+  
