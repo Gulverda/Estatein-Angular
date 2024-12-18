@@ -1,44 +1,89 @@
 .testimonials {
-    text-align: center;
-    color: #fff;
-    background: #111;
-    padding: 2rem;
-  }
-  
+  text-align: center;
+  color: #fff;
+  background: #111;
+  padding: 2rem;
+}
+
+.testimonial-container {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  flex-wrap: wrap; /* Enables wrapping for smaller screens */
+}
+
+.testimonial {
+  background: #1e1e1e;
+  padding: 1.5rem;
+  border-radius: 8px;
+  width: 300px;
+  box-shadow: 0 0 10px #000;
+}
+
+.stars {
+  color: #ffc107;
+}
+
+.user-info img {
+  width: 40px;
+  border-radius: 50%;
+}
+
+.user-info {
+  margin-top: 1rem;
+}
+
+.btn {
+  margin-top: 1rem;
+  padding: 0.5rem 1.5rem;
+  background: #ffc107;
+  color: #111;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   .testimonial-container {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    margin-top: 1rem;
+    gap: 1rem; /* Reduce gap between testimonials */
   }
-  
+
   .testimonial {
-    background: #1e1e1e;
-    padding: 1.5rem;
-    border-radius: 8px;
-    width: 300px;
-    box-shadow: 0 0 10px #000;
+    width: 100%; /* Make testimonials full-width for smaller screens */
+    max-width: 90%; /* Add padding for margins */
   }
-  
-  .stars {
-    color: #ffc107;
-  }
-  
-  .user-info img {
-    width: 40px;
-    border-radius: 50%;
-  }
-  
-  .user-info {
-    margin-top: 1rem;
-  }
+
   .btn {
-    margin-top: 1rem;
-    padding: 0.5rem 1.5rem;
-    background: #ffc107;
-    color: #111;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    width: 100%; /* Make button full-width */
+    padding: 0.75rem 1rem; /* Increase padding for better usability */
   }
-  
+
+  .user-info img {
+    width: 35px; /* Scale down user image */
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonials {
+    padding: 1rem; /* Reduce padding for smaller devices */
+  }
+
+  .testimonial-container {
+    gap: 0.5rem; /* Further reduce gap */
+  }
+
+  .testimonial {
+    padding: 1rem; /* Reduce padding for compact layout */
+    border-radius: 5px; /* Slightly smaller border radius */
+  }
+
+  .btn {
+    font-size: 0.9rem; /* Adjust font size for smaller screens */
+  }
+
+  .user-info img {
+    width: 30px; /* Further reduce user image size */
+  }
+}

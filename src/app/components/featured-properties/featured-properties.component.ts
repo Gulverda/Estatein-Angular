@@ -17,7 +17,7 @@ export class FeaturedPropertiesComponent {
       bedroom: 4,
       bathroom: 3,
       price: '$550,000',
-      imgUrl: 'assets/seaside-villa.jpg', // Replace with actual image path
+      imgUrl: 'assets/Featured1.png',
     },
     {
       title: 'Metropolitan Haven',
@@ -26,7 +26,7 @@ export class FeaturedPropertiesComponent {
       bedroom: 2,
       bathroom: 2,
       price: '$550,000',
-      imgUrl: 'assets/metropolitan-haven.jpg', // Replace with actual image path
+      imgUrl: 'assets/Featured2.png', 
     },
     {
       title: 'Rustic Retreat Cottage',
@@ -35,7 +35,7 @@ export class FeaturedPropertiesComponent {
       bedroom: 3,
       bathroom: 3,
       price: '$550,000',
-      imgUrl: 'assets/rustic-retreat.jpg', // Replace with actual image path
+      imgUrl: 'assets/Featured3.png', 
     },
   ];
 }

@@ -17,7 +17,7 @@ export class ClientTestimonialsComponent {
         'Our experience with Estatein was outstanding. Their team’s dedication made finding our dream home a breeze.',
       name: 'Wade Warren',
       location: 'USA, California',
-      avatar: 'assets/user1.png',
+      avatar: 'assets/User1.png',
     },
     {
       stars: [1, 2, 3, 4, 5],
@@ -26,7 +26,7 @@ export class ClientTestimonialsComponent {
         'Estatein provided us with top-notch service. They helped us sell quickly at a great price.',
       name: 'Emelie Thomson',
       location: 'USA, Florida',
-      avatar: 'assets/user2.png',
+      avatar: 'assets/User2.png',
     },
     {
       stars: [1, 2, 3, 4, 5],
@@ -35,7 +35,7 @@ export class ClientTestimonialsComponent {
         'The Estatein team guided us through the entire buying process. Thank you for your support!',
       name: 'John Mans',
       location: 'USA, Nevada',
-      avatar: 'assets/user3.png',
+      avatar: 'assets/User3.png',
     },
   ];
 }

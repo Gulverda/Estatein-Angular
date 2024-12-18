@@ -1,32 +1,68 @@
 .faq {
-    text-align: center;
-    color: #fff;
-    background: #111;
-    padding: 2rem;
-  }
-  
+  text-align: center;
+  color: #fff;
+  background: #111;
+  padding: 2rem;
+}
+
+.faq-container {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  flex-wrap: wrap; /* Enables wrapping for smaller screens */
+}
+
+.faq-item {
+  background: #1e1e1e;
+  padding: 1.5rem;
+  border-radius: 8px;
+  width: 300px;
+  box-shadow: 0 0 10px #000;
+}
+
+.btn {
+  margin-top: 1rem;
+  padding: 0.5rem 1.5rem;
+  background: #ffc107;
+  color: #111;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   .faq-container {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    margin-top: 1rem;
+    gap: 1rem; /* Reduce gap for smaller screens */
   }
-  
+
   .faq-item {
-    background: #1e1e1e;
-    padding: 1.5rem;
-    border-radius: 8px;
-    width: 300px;
-    box-shadow: 0 0 10px #000;
+    width: 100%; /* Make items full-width for smaller screens */
+    max-width: 90%; /* Add some padding for margins */
   }
-  
+
   .btn {
-    margin-top: 1rem;
-    padding: 0.5rem 1.5rem;
-    background: #ffc107;
-    color: #111;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    width: 100%; /* Make the button full-width */
+    padding: 0.75rem 1rem; /* Adjust padding for better touch interaction */
   }
-  
+}
+
+@media (max-width: 480px) {
+  .faq {
+    padding: 1rem; /* Reduce padding for very small screens */
+  }
+
+  .faq-container {
+    gap: 0.5rem; /* Reduce gap further */
+  }
+
+  .faq-item {
+    padding: 1rem; /* Reduce padding for smaller content */
+    border-radius: 5px; /* Slightly smaller border radius */
+  }
+
+  .btn {
+    font-size: 0.9rem; /* Adjust font size for smaller screens */
+  }
+}
