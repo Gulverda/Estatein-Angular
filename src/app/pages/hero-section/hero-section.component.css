@@ -124,7 +124,7 @@
   }
   @media (max-width: 992px) {
     .hero-section {
-        margin-top: 40px;
+        margin-top: 28px;
         gap: 20px;
       }
       
@@ -133,7 +133,7 @@
       }
 
     .hero-section {
-      flex-direction: column-reverse;
+      flex-direction: column;
       text-align: center;
     }
   
@@ -191,6 +191,10 @@
   }
   
   @media (max-width: 576px) {
+    .hero-section {
+      flex-direction: column-reverse;
+    }
+
     .hero-content h1 {
       font-size: 2rem;
     }

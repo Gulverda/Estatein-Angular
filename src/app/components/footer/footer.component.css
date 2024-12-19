@@ -208,9 +208,13 @@
 
   .footer-subscribe input,
   .footer-subscribe button {
-    width: 100%;
+    /* width: 100%; */
     font-size: clamp(0.9rem, 4vw, 1rem);
     padding: clamp(0.5rem, 3vw, 0.8rem);
+  }
+
+  .footer-subscribe input{
+    width: 100%;
   }
 
   .footer-logo .logo-text {

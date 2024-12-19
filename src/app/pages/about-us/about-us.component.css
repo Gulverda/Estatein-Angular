@@ -1,0 +1,158 @@
+.about-us {
+  background-color: #121212;
+  color: #fff;
+  padding: clamp(1rem, 5vw, 3rem);
+}
+
+.section.journey {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: clamp(1.5rem, 4vw, 2rem); */
+  gap: clamp(1rem, 2.5vw, 2rem);
+}
+
+.left_about {
+  flex: 1;
+  max-width: 50%;
+}
+
+.aboutus-image {
+  flex: 1;
+  max-width: 50%;
+  text-align: center;
+}
+
+.aboutus-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.stats {
+  display: flex;
+  gap: clamp(0.5rem, 1.5vw, 1rem);
+  margin-top: clamp(0.5rem, 1.5vw, 1rem);
+}
+
+.stat {
+  text-align: center;
+  font-weight: bold;
+}
+
+.section {
+  margin-bottom: clamp(2rem, 5vw, 3rem);
+}
+
+.section h2 {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  margin-bottom: clamp(0.5rem, 2vw, 1rem);
+  color: #fff;
+}
+
+.section p {
+  font-size: clamp(1rem, 3vw, 1.2rem);
+  margin-bottom: clamp(1rem, 3vw, 2rem);
+  color: #bbb;
+}
+
+.section.journey .stats {
+  display: flex;
+  gap: clamp(1rem, 3vw, 2rem);
+}
+
+.section.journey .stats .stat {
+  border: 1px solid #262626;
+  background-color: #1a1a1a;
+  padding: clamp(1rem, 2.5vw, 16px) clamp(1.5rem, 3.5vw, 24px);
+  text-align: left;
+  border-radius: 12px;
+  font-size: clamp(1.5rem, 5vw, 32px);
+  font-weight: 700;
+}
+
+.section.journey .stats .stat span {
+  display: block;
+  font-size: clamp(0.75rem, 2vw, 1rem);
+  color: #999999;
+}
+
+.section.values .cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(1rem, 3vw, 2rem);
+}
+
+.section.values .cards .card {
+  background: #1c1c1c;
+  padding: clamp(1rem, 3vw, 1.5rem);
+  border-radius: 8px;
+  border: 1px solid #444;
+}
+
+.section.values .cards .card h3 {
+  color: #fff;
+  font-size: clamp(1rem, 3vw, 1.2rem);
+}
+
+.section.values .cards .card p {
+  color: #999;
+}
+
+.section.achievements .achievements-grid {
+  display: flex;
+  gap: clamp(1rem, 3vw, 2rem);
+}
+
+.section.achievements .achievements-grid .achievement {
+  background: #222;
+  padding: clamp(1rem, 3vw, 1.5rem);
+  border-radius: 8px;
+}
+
+.section.achievements .achievements-grid .achievement h3 {
+  font-size: clamp(1rem, 3vw, 1.2rem);
+  color: #fff;
+}
+
+.section.achievements .achievements-grid .achievement p {
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
+  color: #bbb;
+}
+
+@media (max-width: 1000px) {
+  .section.journey {
+    flex-direction: column;
+  }
+
+  .left_about,
+  .aboutus-image {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .section.journey .stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .stat:nth-child(3) {
+      grid-column: 1 / 3; /* Makes the third stat span both columns */
+      text-align: center; /* Centers the text */
+    }  
+
+  .section.journey .stats .stat {
+    text-align: center;
+  }
+
+  .section.achievements .achievements-grid {
+    flex-direction: column;
+  }
+
+  .section.values .cards {
+    grid-template-columns: 1fr;
+  }
+}
