@@ -12,8 +12,8 @@
   width: 100%;
   margin: 0 auto;
   padding: 30px; /* Add padding for a more spacious feel */
-  background: #ffffff;
-  border: 1px solid #ced4da;
+  background: none;
+  border: 1px solid #262626;
   border-radius: 8px;
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1); /* Slightly bigger shadow */
 }
@@ -21,13 +21,15 @@
 /* Heading */
 h2 {
   text-align: center;
-  color: #2c3e50; /* Darker text for better readability */
+  color: #FFFFFF; /* Darker text for better readability */
   font-size: 24px;
   margin-bottom: 20px; /* Space between the title and the form */
 }
 
 p{
-  color: red;
+  color: rgb(205, 17, 17);
+  margin-top: 10px;
+  font-size: 13px;
 }
 
 /* Form fields */
@@ -38,23 +40,26 @@ p{
 label {
   display: block;
   margin-bottom: 8px;
-  color: #495057; /* Slightly darker gray for text */
+  color: #FFFFFF; /* Slightly darker gray for text */
   font-weight: 600;
+  margin-top: 20px;
 }
 
 input {
   width: 100%; /* Ensure input takes full width */
   padding: 12px; /* Add more padding for comfort */
   font-size: 16px; /* Larger text for better readability */
-  border: 1px solid #ced4da;
+  border: 1px solid #262626;
   border-radius: 4px;
   box-sizing: border-box; /* Ensures padding is inside the element */
   transition: border-color 0.3s ease; /* Smooth transition for focus effect */
+  background: none;
 }
 
 input:focus {
-  border-color: #007bff; /* Blue border on focus for emphasis */
-  outline: none; /* Remove default focus outline */
+  background-color: #161a1e;
+  border-color: #703bf7; 
+  outline: none;
 }
 
 /* Button styling */
@@ -63,7 +68,7 @@ button {
   width: 100%;
   padding: 12px; /* Increased padding for better button size */
   font-size: 16px;
-  background-color: #007bff;
+  background-color: #703bf7;
   color: white;
   border: none;
   border-radius: 4px;
@@ -72,7 +77,7 @@ button {
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #5631c9;
   transform: scale(1.05); /* Slight grow effect for hover */
 }
 
@@ -86,7 +91,8 @@ button:hover {
 
 /* Toggle button to switch between login and registration */
 .toggle-button {
-  margin-top: 20px;
+  top: 10px;
+  position: relative;
   background: none;
   border: none;
   color: #007bff;

@@ -126,16 +126,14 @@
     .hero-section {
         margin-top: 28px;
         gap: 20px;
+        padding: 0 clamp(1rem, 5vw, 2rem);
+        flex-direction: column;
+        text-align: center;
       }
       
     .hero-content {
         padding: 0;
       }
-
-    .hero-section {
-      flex-direction: column;
-      text-align: center;
-    }
   
     .hero-content, .hero-image {
       max-width: 100%;
@@ -161,10 +159,6 @@
         grid-column: 1 / 3; /* Makes the third stat span both columns */
         text-align: center; /* Centers the text */
       }
-
-    .hero-section{
-        padding: 16px;
-    }
     
     .hero-image img{
         border-radius: 12px;
