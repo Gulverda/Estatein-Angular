@@ -9,6 +9,21 @@
     <li><a routerLink="/about-us" (click)="toggleMenu()">About Us</a></li>
     <li><a routerLink="/properties" (click)="toggleMenu()">Properties</a></li>
     <li><a routerLink="/services" (click)="toggleMenu()">Services</a></li>
+
+    <li>
+      <div *ngIf="!isLoggedIn">
+        <button class="login_button" style="display: none;">
+          <a routerLink="/login" (click)="toggleMenu()">Login</a>
+        </button>
+      </div>
+    </li>
+
+    <li>
+      <div *ngIf="isLoggedIn">
+        <span class="user-name">{{ user.username }}</span>
+        <button class="sign-out_button" (click)="signOut()">Sign Out</button>
+      </div>
+    </li>
   </ul>
 
       <!-- Conditionally display Login or User Info -->
@@ -19,7 +34,7 @@
       </div>
       
       <!-- User name and Sign Out button for logged-in users -->
-      <div *ngIf="isLoggedIn">
+      <div *ngIf="isLoggedIn" style="display: none;">
         <span class="user-name">{{ user.username }}</span>
         <button class="sign-out_button" (click)="signOut()">Sign Out</button>
       </div>
