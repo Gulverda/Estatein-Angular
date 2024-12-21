@@ -1,0 +1,100 @@
+/* Main container to center everything vertically and horizontally */
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Ensure it takes full viewport height */
+}
+
+/* Login container styling */
+.login-container {
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 30px; /* Add padding for a more spacious feel */
+  background: #ffffff;
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1); /* Slightly bigger shadow */
+}
+
+/* Heading */
+h2 {
+  text-align: center;
+  color: #2c3e50; /* Darker text for better readability */
+  font-size: 24px;
+  margin-bottom: 20px; /* Space between the title and the form */
+}
+
+p{
+  color: red;
+}
+
+/* Form fields */
+.form-group {
+  margin-bottom: 20px; /* More space between fields */
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #495057; /* Slightly darker gray for text */
+  font-weight: 600;
+}
+
+input {
+  width: 100%; /* Ensure input takes full width */
+  padding: 12px; /* Add more padding for comfort */
+  font-size: 16px; /* Larger text for better readability */
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  box-sizing: border-box; /* Ensures padding is inside the element */
+  transition: border-color 0.3s ease; /* Smooth transition for focus effect */
+}
+
+input:focus {
+  border-color: #007bff; /* Blue border on focus for emphasis */
+  outline: none; /* Remove default focus outline */
+}
+
+/* Button styling */
+button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px; /* Increased padding for better button size */
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05); /* Slight grow effect for hover */
+}
+
+/* Error message styling */
+.message {
+  margin-top: 20px;
+  text-align: center;
+  color: #dc3545; /* Red for error messages */
+  font-size: 14px;
+}
+
+/* Toggle button to switch between login and registration */
+.toggle-button {
+  margin-top: 20px;
+  background: none;
+  border: none;
+  color: #007bff;
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 14px;
+}
+
+.toggle-button:hover {
+  color: #0056b3; /* Darker blue for hover effect */
+}

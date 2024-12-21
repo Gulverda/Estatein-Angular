@@ -1,0 +1,37 @@
+<div class="main">
+  <div class="login-container">
+    <h2 *ngIf="!isSignUp">Sign In</h2>
+    <h2 *ngIf="isSignUp">Register</h2>
+  
+    <form (ngSubmit)="isSignUp ? onRegister() : onSignIn()">
+      <label for="username">Username:</label>
+      <input
+        type="text"
+        id="username"
+        [(ngModel)]="user.username"
+        name="username"
+        placeholder="username"
+        required
+      />
+  
+      <label for="password">Password:</label>
+      <input
+        type="password"
+        id="password"
+        [(ngModel)]="user.password"
+        name="password"
+        placeholder="password"
+        required
+      />
+  
+      <button type="submit">{{ isSignUp ? 'Register' : 'Sign In' }}</button>
+    </form>
+  
+    <p>{{ message }}</p>
+  
+    <a class="toggle-button" (click)="toggleForm()">
+      {{ isSignUp ? 'Already have an account? Sign In' : 'Don’t have an account? Register' }}
+    </a>
+  </div>
+</div>
+  

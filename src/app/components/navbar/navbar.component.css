@@ -51,7 +51,7 @@
     transition: transform 0.3s ease;
   }
 
-  .contact_button {
+  .login_button {
     background-color: #703bf7;
     border: 1px solid #262626;
     padding: 16px 24px;
@@ -59,7 +59,7 @@
     cursor: pointer;
   }
 
-  .contact_button a{
+  .login_button a{
     color: #fff;
     text-decoration: none;
   }
@@ -71,7 +71,7 @@
       display: flex;
     }
 
-    .contact_button{
+    .login_button{
         display: none;
     }
   
@@ -101,7 +101,7 @@
       margin-bottom: 0;
     }
 
-    ul li .contact_button{
+    ul li .login_button{
         display: block !important;
     }
   }
