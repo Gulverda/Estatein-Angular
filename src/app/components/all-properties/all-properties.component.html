@@ -14,11 +14,13 @@
           <div class="property-details">
             <span>{{ property.bedroom }}-Bedroom</span>
             <span>{{ property.bathroom }}-Bathroom</span>
-            <span>Villa</span>
           </div>
           <p class="price">
             Price: <strong>{{ property.price }}</strong>
           </p>
+          <a [routerLink]="['/property', property.id]" class="details-link">
+            View Details
+          </a>
         </div>
       </div>
     </div>

@@ -1,0 +1,21 @@
+<div class="property-detail" *ngIf="property; else notFound">
+    <h1>{{ property.title }}</h1>
+    <div class="property-image">
+      <img [src]="property.imgUrl" [alt]="property.title" />
+    </div>
+    <div class="property-info">
+      <p>{{ property.description }}</p>
+      <div class="property-details">
+        <span>{{ property.bedroom }}-Bedroom</span>
+        <span>{{ property.bathroom }}-Bathroom</span>
+      </div>
+      <p class="price">
+        Price: <strong>{{ property.price }}</strong>
+      </p>
+    </div>
+  </div>
+  
+  <ng-template #notFound>
+    <h2>Property not found</h2>
+  </ng-template>
+  
