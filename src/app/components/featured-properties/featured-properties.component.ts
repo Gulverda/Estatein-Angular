@@ -13,6 +13,7 @@ import { RouterModule } from '@angular/router';
 export class FeaturedPropertiesComponent {
   properties = [
     {
+      id: 1,
       title: 'Seaside Serenity Villa',
       description:
         'A stunning 4-bedroom, 3-bathroom villa in a peaceful suburban neighborhood.',
@@ -22,6 +23,7 @@ export class FeaturedPropertiesComponent {
       imgUrl: 'assets/Featured1.png',
     },
     {
+      id: 2,
       title: 'Metropolitan Haven',
       description:
         'A chic and fully-furnished 2-bedroom apartment with panoramic city views.',
@@ -31,6 +33,7 @@ export class FeaturedPropertiesComponent {
       imgUrl: 'assets/Featured2.png', 
     },
     {
+      id: 3,
       title: 'Rustic Retreat Cottage',
       description:
         'An elegant 3-bedroom, 2.5-bathroom townhouse in a gated community.',

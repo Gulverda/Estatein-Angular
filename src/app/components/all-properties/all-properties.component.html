@@ -1,28 +1,72 @@
 <div class="all-properties">
-    <h1>All Properties</h1>
-    <div class="properties-grid">
-      <div
-        class="property-card"
-        *ngFor="let property of properties"
-      >
-        <div class="property-image">
-          <img [src]="property.imgUrl" [alt]="property.title" />
-        </div>
-        <div class="property-content">
-          <h3>{{ property.title }}</h3>
-          <p>{{ property.description }}</p>
-          <div class="property-details">
-            <span>{{ property.bedroom }}-Bedroom</span>
-            <span>{{ property.bathroom }}-Bathroom</span>
-          </div>
-          <p class="price">
-            Price: <strong>{{ property.price }}</strong>
-          </p>
-          <a [routerLink]="['/property', property.id]" class="details-link">
-            View Details
-          </a>
-        </div>
+    <h1 class="heading">All Properties</h1>
+  
+    <!-- Search Bar -->
+    <div class="search-bar">
+      <input
+        type="text"
+        placeholder="Search by title"
+        [(ngModel)]="searchQuery"
+        (input)="applyFilters()"
+        class="search-input"
+      />
+    </div>
+  
+    <!-- Filters -->
+    <div class="filters">
+      <div class="filter-group">
+        <h3>Filter by Bedrooms</h3>
+        <label>
+          <input type="checkbox" [(ngModel)]="filters.bedroom1" (change)="applyFilters()" /> 1 Bedroom
+        </label>
+        <label>
+          <input type="checkbox" [(ngModel)]="filters.bedroom2" (change)="applyFilters()" /> 2 Bedrooms
+        </label>
+        <label>
+          <input type="checkbox" [(ngModel)]="filters.bedroom3" (change)="applyFilters()" /> 3 Bedrooms
+        </label>
       </div>
+  
+      <div class="filter-group">
+        <h3>Filter by Bathrooms</h3>
+        <label>
+          <input type="checkbox" [(ngModel)]="filters.bathroom1" (change)="applyFilters()" /> 1 Bathroom
+        </label>
+        <label>
+          <input type="checkbox" [(ngModel)]="filters.bathroom2" (change)="applyFilters()" /> 2 Bathrooms
+        </label>
+      </div>
+    </div>
+  
+    <!-- Properties Grid -->
+    <div class="properties-grid">
+        <div class="property-card" *ngFor="let property of properties">
+            <div class="property-image">
+              <img [src]="property.imgUrl" [alt]="property.title" />
+            </div>
+            <div class="property-content">
+              <h3>{{ property.title }}</h3>
+              <p>
+                {{ property.description }}
+                <a href="#">Read More</a>
+              </p>
+              <div class="property-details">
+                <span>{{ property.bedroom }}-Bedroom</span>
+                <span>{{ property.bathroom }}-Bathroom</span>
+                <span>Villa</span>
+              </div>
+              <div class="property-footer">
+                <p class="price">Price <strong>{{ property.price }}</strong></p>
+                    <a [routerLink]="['/property', property.id]" class="details-link">
+                        <button class="details-btn">
+
+                        View Details
+                    </button>
+
+                      </a>
+              </div>
+            </div>
+          </div>
     </div>
   </div>
   

@@ -27,8 +27,13 @@
           </div>
           <div class="property-footer">
             <p class="price">Price <strong>{{ property.price }}</strong></p>
-            <button class="details-btn">View Property Details</button>
-          </div>
+            <a [routerLink]="['/property', property.id]" class="details-link">
+              <button class="details-btn">
+
+                  View Details
+              </button>
+          </a>          
+        </div>
         </div>
       </div>
     </div>
