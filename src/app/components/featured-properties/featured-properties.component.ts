@@ -1,10 +1,12 @@
 import { NgFor } from '@angular/common';
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
+
 
 @Component({
   selector: 'app-featured-properties',
   standalone: true,
-  imports: [NgFor],
+  imports: [NgFor, RouterModule],
   templateUrl: './featured-properties.component.html',
   styleUrls: ['./featured-properties.component.css'],
 })

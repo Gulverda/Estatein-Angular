@@ -1,0 +1,26 @@
+<div class="all-properties">
+    <h1>All Properties</h1>
+    <div class="properties-grid">
+      <div
+        class="property-card"
+        *ngFor="let property of properties"
+      >
+        <div class="property-image">
+          <img [src]="property.imgUrl" [alt]="property.title" />
+        </div>
+        <div class="property-content">
+          <h3>{{ property.title }}</h3>
+          <p>{{ property.description }}</p>
+          <div class="property-details">
+            <span>{{ property.bedroom }}-Bedroom</span>
+            <span>{{ property.bathroom }}-Bathroom</span>
+            <span>Villa</span>
+          </div>
+          <p class="price">
+            Price: <strong>{{ property.price }}</strong>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
