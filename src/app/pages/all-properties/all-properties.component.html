@@ -14,59 +14,53 @@
   
     <!-- Filters -->
     <div class="filters">
-      <div class="filter-group">
-        <h3>Filter by Bedrooms</h3>
-        <label>
-          <input type="checkbox" [(ngModel)]="filters.bedroom1" (change)="applyFilters()" /> 1 Bedroom
-        </label>
-        <label>
-          <input type="checkbox" [(ngModel)]="filters.bedroom2" (change)="applyFilters()" /> 2 Bedrooms
-        </label>
-        <label>
-          <input type="checkbox" [(ngModel)]="filters.bedroom3" (change)="applyFilters()" /> 3 Bedrooms
-        </label>
+        <div class="filter-group">
+          <label [ngClass]="{'active': filters.bedroom1}">
+            <input type="checkbox" [(ngModel)]="filters.bedroom1" (change)="applyFilters()" /> 1 Bedroom
+          </label>
+          <label [ngClass]="{'active': filters.bedroom2}">
+            <input type="checkbox" [(ngModel)]="filters.bedroom2" (change)="applyFilters()" /> 2 Bedrooms
+          </label>
+          <label [ngClass]="{'active': filters.bedroom3}">
+            <input type="checkbox" [(ngModel)]="filters.bedroom3" (change)="applyFilters()" /> 3 Bedrooms
+          </label>
+      
+          <label [ngClass]="{'active': filters.bathroom1}">
+            <input type="checkbox" [(ngModel)]="filters.bathroom1" (change)="applyFilters()" /> 1 Bathroom
+          </label>
+          <label [ngClass]="{'active': filters.bathroom2}">
+            <input type="checkbox" [(ngModel)]="filters.bathroom2" (change)="applyFilters()" /> 2 Bathrooms
+          </label>
+        </div>
       </div>
+      
   
-      <div class="filter-group">
-        <h3>Filter by Bathrooms</h3>
-        <label>
-          <input type="checkbox" [(ngModel)]="filters.bathroom1" (change)="applyFilters()" /> 1 Bathroom
-        </label>
-        <label>
-          <input type="checkbox" [(ngModel)]="filters.bathroom2" (change)="applyFilters()" /> 2 Bathrooms
-        </label>
+   <!-- Properties Grid -->
+<div class="properties-grid">
+    <div class="property-card" *ngFor="let property of filteredProperties">
+      <div class="property-image">
+        <img [src]="property.imgUrl" [alt]="property.title" />
+      </div>
+      <div class="property-content">
+        <h3>{{ property.title }}</h3>
+        <p>
+          {{ property.description }}
+          <a href="#">Read More</a>
+        </p>
+        <div class="property-details">
+          <span>{{ property.bedroom }}-Bedroom</span>
+          <span>{{ property.bathroom }}-Bathroom</span>
+          <span>Villa</span>
+        </div>
+        <div class="property-footer">
+          <p class="price">Price <strong>{{ property.price }}</strong></p>
+          <a [routerLink]="['/property', property.id]" class="details-link">
+            <button class="details-btn">View Details</button>
+          </a>
+        </div>
       </div>
     </div>
+  </div>
   
-    <!-- Properties Grid -->
-    <div class="properties-grid">
-        <div class="property-card" *ngFor="let property of properties">
-            <div class="property-image">
-              <img [src]="property.imgUrl" [alt]="property.title" />
-            </div>
-            <div class="property-content">
-              <h3>{{ property.title }}</h3>
-              <p>
-                {{ property.description }}
-                <a href="#">Read More</a>
-              </p>
-              <div class="property-details">
-                <span>{{ property.bedroom }}-Bedroom</span>
-                <span>{{ property.bathroom }}-Bathroom</span>
-                <span>Villa</span>
-              </div>
-              <div class="property-footer">
-                <p class="price">Price <strong>{{ property.price }}</strong></p>
-                    <a [routerLink]="['/property', property.id]" class="details-link">
-                        <button class="details-btn">
-
-                        View Details
-                    </button>
-
-                      </a>
-              </div>
-            </div>
-          </div>
-    </div>
   </div>
   

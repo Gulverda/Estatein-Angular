@@ -1,4 +1,10 @@
-  .all-properties {
+ *{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+ }
+
+ .all-properties {
     max-width: 1200px;
     margin: 40px auto;
     padding: 20px;
@@ -8,7 +14,7 @@
   .heading {
     text-align: center;
     font-size: 2.5rem;
-    color: #333;
+    color: #ffffff;
     margin-bottom: 30px;
   }
   
@@ -19,13 +25,84 @@
     margin-bottom: 20px;
   }
   
+
+  .filters {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #111; /* Dark background */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    color: #fff;
+  }
+  
+  .filter-group {
+    margin: 0 10px;
+  }
+  
+  .filter-group h3 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #b0b0b0; /* Lighter text for titles */
+  }
+  
+  .filter-group label {
+    display: block;
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid #262626;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+  
+  .filter-group input[type="checkbox"] {
+    display: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    border: 2px solid #555;
+    border-radius: 4px;
+    background-color: #222;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+
+  .filter-group input[type="checkbox"]:checked {
+    background-color: #6c63ff; 
+    border-color: #6c63ff;
+  }
+  
+  .active {
+    background-color: #6c63ff;
+  }
+  
+  .filter-group input[type="checkbox"]:focus {
+    outline: none;
+    box-shadow: 0 0 5px #6c63ff; 
+  }
+  
+  .filter-group label:hover input[type="checkbox"] {
+    border-color: #777; /* Slight hover effect */
+  }
+  
+  .filter-group label span {
+    font-size: 0.9rem;
+    color: #e0e0e0;
+  }
+  
+  
   .search-input {
+    background: none;
     width: 100%;
-    max-width: 500px;
+    max-width: 800px;
     padding: 12px 20px;
-    border: 2px solid #ddd;
+    border: 2px solid #262626;
     border-radius: 8px;
     font-size: 1rem;
+    color: #fff;
     outline: none;
   }
   
@@ -41,7 +118,9 @@
   }
   
   .filter-group {
-    width: 48%;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
   }
   
   .filter-group h3 {
@@ -63,12 +142,12 @@
   /* Responsive Design */
   @media (max-width: 768px) {
     .filters {
-      flex-direction: column;
       align-items: flex-start;
     }
   
     .filter-group {
       width: 100%;
+      flex-direction: column;
       margin-bottom: 20px;
     }
   
