@@ -19,7 +19,7 @@ interface Property {
   standalone: true,
   imports: [CommonModule, FormsModule, RouterLink],
   templateUrl: './all-properties.component.html',
-  styleUrls: ['./all-properties.component.css', '../featured-properties/featured-properties.component.css'],
+  styleUrls: ['./all-properties.component.css', '../../components/featured-properties/featured-properties.component.css'],
 })
 export class AllPropertiesComponent {
   properties: Property[] = [];
