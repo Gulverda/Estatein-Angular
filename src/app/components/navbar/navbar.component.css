@@ -63,9 +63,24 @@
     color: #fff;
     text-decoration: none;
   }
+
+  .logout_info{
+    display: flex;
+    gap: 16px;
+    align-items: center;
+  }
+
+  .sign_out_button{
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
   
   /* Responsive Navbar */
   @media (max-width: 768px) {
+    .logout_info{
+      flex-direction: column;
+    }
 
     .burger {
       display: flex;

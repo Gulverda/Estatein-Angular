@@ -1,9 +1,13 @@
 <div class="property-detail" *ngIf="property; else notFound">
-    <h1>{{ property.title }}</h1>
+  <nav class="breadcrumb">
+    <a href="#">Home</a> » <a href="/all-properties">Properties</a> » {{ property.title }}
+  </nav>
+  <div class="property-content">
     <div class="property-image">
       <img [src]="property.imgUrl" [alt]="property.title" />
     </div>
     <div class="property-info">
+      <h1>{{ property.title }}</h1>
       <p>{{ property.description }}</p>
       <div class="property-details">
         <span>{{ property.bedroom }}-Bedroom</span>
@@ -12,10 +16,11 @@
       <p class="price">
         Price: <strong>{{ property.price }}</strong>
       </p>
+      <button class="cta-button">Get Started</button>
     </div>
   </div>
-  
-  <ng-template #notFound>
-    <h2>Property not found</h2>
-  </ng-template>
-  
+</div>
+
+<ng-template #notFound>
+  <h2>Property not found</h2>
+</ng-template>

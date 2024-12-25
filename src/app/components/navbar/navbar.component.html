@@ -1,6 +1,8 @@
 <nav class="navbar">
   <div class="logo">
-    <img src="assets/Logo.png" alt="Skyscraper">
+    <a routerLink="/" (click)="toggleMenu()">
+      <img src="assets/Logo.png" alt="Skyscraper" />
+    </a>
   </div>
   
   <!-- Menu items -->
@@ -8,7 +10,6 @@
     <li><a routerLink="/" (click)="toggleMenu()">Home</a></li>
     <li><a routerLink="/about-us" (click)="toggleMenu()">About Us</a></li>
     <li><a routerLink="/all-properties" (click)="toggleMenu()">Properties</a></li>
-    <li><a routerLink="/services" (click)="toggleMenu()">Services</a></li>
 
     <li>
       <div *ngIf="!isLoggedIn">
@@ -19,9 +20,11 @@
     </li>
 
     <li>
-      <div *ngIf="isLoggedIn">
+      <div class="logout_info" *ngIf="isLoggedIn">
         <span class="user-name">{{ user.username }}</span>
-        <button class="sign-out_button" (click)="signOut()">Sign Out</button>
+        <button class="sign_out_button" (click)="signOut()">
+          <img src="/assets/sign_out.png" alt="">
+        </button>
       </div>
     </li>
   </ul>
